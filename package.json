@@ -8,6 +8,7 @@
   },
   "author": "",
   "license": "ISC",
+  "repository": {},
   "devDependencies": {
     "typescript": "^1.5.0-beta"
   }
