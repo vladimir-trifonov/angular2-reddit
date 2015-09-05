@@ -44,11 +44,11 @@ class Article {
 	}
 }
 
-@
-Component({
+@Component({
 	selector: 'reddit-article',
 	properties: ['article']
-})@ View({
+})
+@View({
 	template: `
 	<article>
 		<div class="votes">{{ article.votes }}</div>
@@ -72,10 +72,10 @@ class RedditArticle {
 }
 
 
-@
-Component({
+@Component({
 	selector: 'reddit'
-})@ View({
+})
+@View({
 	directives: [RedditArticle, NgFor],
 	template: `
 	<section class="new-link">
@@ -90,6 +90,8 @@ Component({
 
 		<button (click)="addArticle(newtitle, newlink)">Submit Link</button>
 	</section>
+
+	<product-row></product-row>
 
 	<reddit-article *ng-for="#article of articles" [article]="article"></reddit-article>
 `
